@@ -1,2 +1,1 @@
-# JavaStudy
-这是记录我零基础java的学习过程中的经典算法练习代码
+hello world
