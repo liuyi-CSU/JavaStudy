@@ -14,7 +14,12 @@ public class test08 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		String str="edited";
+		 System.out.println(frontAgin(str));
+	}
+
+	private static boolean frontAgin(String str) {
+		 return str.endsWith(str.substring(0,2));
 	}
 
 }

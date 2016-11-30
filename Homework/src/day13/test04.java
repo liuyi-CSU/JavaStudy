@@ -11,6 +11,20 @@ public class test04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] num={7,8,9};
+		method1(num);
+		method2();//不使用循环
+	}
+
+	private static void method2() {
+		for(int i=789;i<=987;i++){
+			String s=String.valueOf(i);
+			if(s.contains("7")&&s.contains("8")&&s.contains("9")){
+				System.out.println(s);
+			}
+		}
+	}
+
+	private static void method1(int[] num) {
 		for (int i = 0; i < num.length; i++) {
 			for (int j = 0; j < num.length; j++) {
 				if(i==j)continue;

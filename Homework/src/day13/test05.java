@@ -18,13 +18,13 @@ public class test05 {
 		Scanner sca = new Scanner(System.in);
 		while (true) {
 			String str = sca.nextLine();
-			if (!str.equals("T") && !str.equals("S")) {
+			if (!str.equalsIgnoreCase("T") && !str.equalsIgnoreCase("S")) {
 				while(!find(arr, arrWeek,str)){
 					System.out.println("请重新输入:");
 					str=sca.nextLine();
 				}
 				break;
-			} else if (str.equals("T") || str.equals("S")){
+			} else if (str.equalsIgnoreCase("T") || str.equalsIgnoreCase("S")){
 				System.out.println("请输入第二个字符:");
 				String str2 = str + sca.nextLine();
 				while(!find(arr, arrWeek,str2)){
@@ -40,7 +40,7 @@ public class test05 {
 	private static boolean find(String[] arr, String[] arrWeek,String str) {
 		boolean flag=false;
 		for (int i = 0; i < arrWeek.length; i++) {
-			if (str.equals(arr[i])) {
+			if (str.equalsIgnoreCase(arr[i])) {
 				System.out.println(arrWeek[i]);
 				flag=true;
 				return flag;
