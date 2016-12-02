@@ -22,10 +22,9 @@ public class test04 {
 		Scanner sca=new Scanner(System.in);
 		String str=sca.nextLine();
 		String regex="\\d{4}-\\d{2}-\\d{2}";
-//		String regex="[0-9]{4}-[0-9]{2}-[0-9]{2}";
+//		String regex="[0-9]{4}-[0-1][0-9]-[0-3][0-9]";
 		Pattern p=Pattern.compile(regex);
 		Matcher m=p.matcher(str);
-//		System.out.println(str);
 		while(!m.find()){
 			System.out.println("请输入正确的日期格式:yyyy-MM-dd");
 			str=sca.nextLine();
@@ -34,19 +33,20 @@ public class test04 {
 	}
 
 	private static void syso(String str) throws ParseException {
+		//SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类。它允许进行格式化（日期 -> 文本）、解析（文本 -> 日期）和规范化。 
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-		Date date=sdf.parse(str);
+		Date date=sdf.parse(str);//解析字符串的文本，生成 Date
 		
-		Calendar instance = Calendar.getInstance();
-		instance.setTime(date);
+		Calendar instance = Calendar.getInstance();//getInstance():使用默认时区和语言环境获得一个日历
+		instance.setTime(date);//setTime():使用给定的 Date 设置此 Calendar 的时间
 		
-		SimpleDateFormat sd=new SimpleDateFormat("yyyy年-MM月-dd日");
-		String format = sd.format(date);
+//		SimpleDateFormat sd=new SimpleDateFormat("yyyy年-MM月-dd日");
+//		String format = sd.format(date);
+//		System.out.println(format);
 		
-		System.out.println(format);
-		int weekDay=instance.get(Calendar.DAY_OF_WEEK);
+		int weekDay=instance.get(Calendar.DAY_OF_WEEK);//DAY_OF_WEEK从1开始
 		String[] strWeekDay={"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
-		System.out.println(strWeekDay[weekDay-1]);
+		System.out.println(strWeekDay[weekDay-1]);//星期几,需要减一,因为人家认为周日才是第一天
 		System.out.println(instance.get(Calendar.DAY_OF_YEAR));
 	}
 

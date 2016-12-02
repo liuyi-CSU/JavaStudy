@@ -9,7 +9,7 @@ public class test06 {
 	 * sumNumbers("aa11b33") 44 sumNumbers("7 11") 18
 	 */
 	public static void main(String[] args) {
-		String str = "7 11";
+		String str = "hjkhjh";
 		System.out.println(sumNumbers(str));
 	}
 

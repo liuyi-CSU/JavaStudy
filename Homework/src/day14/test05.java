@@ -24,7 +24,7 @@ public class test05 {
 	public static void setCount(int count) {
 		test05.count = count;
 	}
-
+//也可以用正则表达式
 	private static void countCode(String str) {
 		// TODO Auto-generated method stub
 		int indexOf = str.indexOf("co");
