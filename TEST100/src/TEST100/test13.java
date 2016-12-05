@@ -15,7 +15,13 @@ public class test13 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println(withouEnd2("Hello"));
+	}
+	public static String withouEnd2(String str){
+		if(str.length()<=2)return "";
+		else{
+			return str.substring(1, str.length()-1);
+		}
 	}
 
 }
