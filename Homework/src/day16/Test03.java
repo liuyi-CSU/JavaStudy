@@ -31,6 +31,11 @@ public class Test03 {
 	}
 	
 	private static void sort1(List<String> list1) {
+		method1(list1);
+		Collections.sort(list1);
+	}
+
+	private static void method1(List<String> list1) {
 		Collections.sort(list1, new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {
@@ -39,7 +44,6 @@ public class Test03 {
 				return charArray1[0]-charArray2[0];
 			}
 		});
-		
 	}
 
 	private static void sort2(List<Integer> list2) {

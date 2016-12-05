@@ -36,6 +36,9 @@ class Stack1 {
 	public boolean isEmpty() {
 		return list.isEmpty();
 	}
+	public void show(){
+		  System.out.println(list);
+	}
 }
 
 //利用ArrayList构建一个栈结构
@@ -43,9 +46,15 @@ class Stack2{
 	private ArrayList list =new ArrayList();
 	
 	public void in(Object obj){
-		list.add(obj);
+		list.add(0,obj);
 	}
 	public Object out(){
-		return list.remove(list.size()-1);
+		return list.remove(0);
+	}
+	public boolean isEmplty(){
+		return list.isEmpty();
+	}
+	public void show(){
+		  System.out.println(list);
 	}
 }
