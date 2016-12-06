@@ -15,6 +15,11 @@ public class Test05 {
 		String[] str={"d","e","f"};
 //		String[] str2={"d","e","f"};
 //		String[] str3={"d","e","f"};
+		HashSet<String> hs = method1(str);
+		System.out.println(hs);
+	}
+
+	private static HashSet<String> method1(String[] str) {
 		HashSet<String> hs=new HashSet<>();
 		for (int i = 0; i < str.length; i++) {
 			hs.add(str[i]);
@@ -27,7 +32,7 @@ public class Test05 {
 				}
 			}
 		}
-		System.out.println(hs);
+		return hs;
 	}
 
 }
