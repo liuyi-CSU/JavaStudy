@@ -32,8 +32,6 @@ public class Test03 {
 
 	private static int traverse2(HashMap<String, Double> hm) {
 		// TODO Auto-generated method stub
-		Set<String> keySet=hm.keySet();
-		Iterator<String> it = keySet.iterator();
 		int count=0;
 		for (String string : hm.keySet()) {
 			System.out.println(string+"="+hm.get(string));
